@@ -1,20 +1,16 @@
-//-default while loop
-- let i = 0;
-ul.list
-  while i < 5
-    li.list__item #{++i}
+//-Rainbow practice
+-
+  let rainbowColors = {
+    red: 'red',
+    orange: 'orange',
+    yellow: 'yellow',
+    green: 'green',
+    lightblue: 'lightblue',
+    blue: 'blue',
+    violet: 'violet'
+  }
 
-//-each loop for array
-- const array = ['first', 'second', 'third']
-br
-ul
-  each item, i in array
-    li Элемент #{i+1} = #{item}
-
-
-//-each loop for object
-- const obj = { first: 'first', second: 2, third: [ 1, 2, 3 ]}
-br
-ul
-  each value, key in obj
-    li #{key} = #{typeof(value)}
+.colors
+  - let i = 0;
+  each rainbValue, rainbKey in rainbowColors
+    .colors__item(style={ background: rainbKey }, title=`${++i}`)= rainbValue.toUpperCase()

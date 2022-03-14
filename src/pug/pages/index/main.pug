@@ -1,28 +1,20 @@
-- const friends = 10;
+//-default while loop
+- let i = 0;
+ul.list
+  while i < 5
+    li.list__item #{++i}
 
+//-each loop for array
+- const array = ['first', 'second', 'third']
+br
 ul
-  //-default if
-  if (friends > 10)
-    li Очень много друзей
-  else if (friends < 10)
-    li Не очень много друзей
-  else
-    li Ровно #{friends} друзей
+  each item, i in array
+    li Элемент #{i+1} = #{item}
 
 
-  //-case-when(like switch-case)
-  case friends
-    when 0
-    when 1
-    when 2
-    when 3
-      li Друзей - мало
-    default
-      li Достаточно общительный :)
-
-
-  //-another default if
-  if (friends + 1 == 5)
-    li friends = #{friends + 1}
-  else
-    li friends != #{friends + 1}
+//-each loop for object
+- const obj = { first: 'first', second: 2, third: [ 1, 2, 3 ]}
+br
+ul
+  each value, key in obj
+    li #{key} = #{typeof(value)}

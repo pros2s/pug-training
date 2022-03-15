@@ -1,0 +1,45 @@
+.message {
+  display: flex;
+
+  margin: 10px auto;
+  padding: 10px;
+
+  width: 800px;
+  background-color: #eee;
+
+  border: 2px solid rgb(147, 147, 202);
+  border-radius: 4px;
+  img {
+    margin: auto 10px;
+
+    width: 64px;
+    height: 64px;
+
+    border-radius: 4px;
+  }
+}
+
+.message__info {
+  margin-left: 10px;
+}
+
+.message__header {
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 5px;
+}
+
+.message__name {
+  color: blue;
+}
+
+.message__time {
+  margin-right: 50px;
+
+  color: rgb(105, 105, 105);
+}
+
+.message__text {
+  font-size: 15px;
+}

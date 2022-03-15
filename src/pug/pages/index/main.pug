@@ -1,28 +1,9 @@
 //-message practice
--
-  const messageObj = [
-    {
-      name: 'Радько Петр',
-      time: '15 марта 2022',
-      text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, natus sunt sit quidem consequuntur molestias accusamus officiis commodi maxime quam blanditiis nostrum iste. Iure nam ducimus in assumenda aliquam dicta, qu'
-    },
-    {
-      name: 'Иванов Иван',
-      time: '08 апреля 2013',
-      text: 'Lorem ipsum dolor sit amelanditiis nostrum iste. Iure nam ducimus in assumenda aliquam dicta,uidem consequuntur molestias accusamus officiis commodi maxime t consectetur adipisicing elit. Tenetur, natus sunt '
-    },
-    {
-      name: 'Маленьков Лодырь',
-      time: '26 декабря 2010',
-      text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, natus sunt sit quidem consequuntur molestias accusamus officiis commodi maxime quam blanditiis nostrum iste. Iure nam ducimus in assumenda aliquam dicta,uidem consequuntur molestias accusamus officiis commodi maxime quam blanditiis nostrum iste. Iure nam ducimus in assumenda aliquam dicta, qu'
-    },
-  ]
 
 each messageItem in messageObj
-  .message
-    img.message__avatar(src= `https://picsum.photos/seed/${messageItem.name}/64`, alt='avatar')
-    .message__info
-      .message__header
-        .message__name= messageItem.name
-        time.message__time(datatime='2022-03-15 3:26')= messageItem.time
-      p.message__text= messageItem.text
+  +outputMessage(messageItem)
+
+each messageItem in messageObj.reverse()
+  +outputMessage(messageItem)
+
++outputContent(content)

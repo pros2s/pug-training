@@ -1,0 +1,16 @@
+mixin outputMessage(data)
+  .message
+    img.message__avatar(src= `https://picsum.photos/seed/${data.name}/64`, alt='avatar')
+    .message__info
+      .message__header
+        .message__name= data.name
+        time.message__time(datatime='2022-03-15 3:26')= data.time
+      p.message__text= data.text
+
+mixin outputContent(data, artName=data.article1)
+  ol.content(title=artName)
+    each artValue, artKey in data
+      if (typeof artValue === 'string')
+        li.content__article= artValue
+      else
+        +outputContent(artValue, artKey)
